@@ -4,5 +4,5 @@ public class Instrumento {
 
 	// atributos
 	private String nombre, marca, tipo_inst;
-	private String apellidose;
+	private String apellidoseee;
 }
