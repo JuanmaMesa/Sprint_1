@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="Task1_Herencia"/>
+	<classpathentry kind="src" path="Tasca1_Herencia"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
