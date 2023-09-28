@@ -7,6 +7,10 @@ public abstract class Instrumento {
 	private int id;
 	private static int instrumento = 1;
 	
+	static {
+		System.out.println("El instrumento se ha cargado");
+	}
+	
 
 	public Instrumento(String nombre, double  precio) {
 		
