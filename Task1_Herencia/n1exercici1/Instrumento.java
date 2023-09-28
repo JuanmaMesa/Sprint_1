@@ -8,7 +8,7 @@ public abstract class Instrumento {
 	private static int instrumento = 1;
 	
 	static {
-		System.out.println("Un instrumento se ha creado.");
+		System.out.println("Un instrumento se esta cargando.");
 	}
 	
 
