@@ -7,7 +7,7 @@ public class InstrumentoViento extends Instrumento {
 		super(nombre,precio);
 		
 	}
-	
+	//@Override
 	public String tocar() {
 		
 		return " Esta sonando un instrumento de viento.";
