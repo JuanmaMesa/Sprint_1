@@ -8,7 +8,7 @@ public abstract class Instrumento {
 	private static int instrumento = 1;
 	
 	static {
-		System.out.println("El instrumento se ha cargado");
+		System.out.println("Un instrumento se ha creado.");
 	}
 	
 
@@ -32,6 +32,11 @@ public abstract class Instrumento {
 		
 		return precio;
 		
+	}
+	
+	public int getId() {
+		
+		return id;
 	}
 	
 	public abstract String tocar();
