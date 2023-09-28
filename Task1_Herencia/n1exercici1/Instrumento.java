@@ -1,8 +1,19 @@
 package n1exercici1;
 
-public class Instrumento {
+public abstract class Instrumento {
 
-	// atributos
-	private String nombre, marca, tipo_inst;
-	private String apellidoseee;
+	private String nombre;
+	private double precio;
+	
+
+	public Instrumento(String nombre, double precio) {
+		
+		this.nombre = nombre;
+		this.precio = precio;
+		
+	}
+	
+	public abstract String tocar();
+	
+	
 }
