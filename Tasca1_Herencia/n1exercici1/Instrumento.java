@@ -8,9 +8,10 @@ public abstract class Instrumento {
 	private static int instrumento = 1;
 	
 	static {
-		System.out.println("Un instrumento se esta cargando.");
+		System.out.println("La clase Instrumento se ha cargado.");
 	}
 	
+
 
 	public Instrumento(String nombre, double  precio) {
 		
@@ -41,5 +42,15 @@ public abstract class Instrumento {
 	
 	public abstract String tocar();
 	
+	
+
+
+	public String toString() {
+		
+		return id +"- Instrumento "+ nombre+":";
+				
+		
+		
+	}
 	
 }

@@ -7,5 +7,8 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Tasca1_Herencia"/>
+	<classpathentry kind="src" path="Laboratorio"/>
+	<classpathentry kind="src" path="Tasca2_Exceptions"/>
+	<classpathentry kind="src" path="Tasca3_JavaCollections"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
