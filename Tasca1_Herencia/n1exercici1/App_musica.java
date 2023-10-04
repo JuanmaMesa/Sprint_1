@@ -7,7 +7,6 @@ public class App_musica {
 		
 		
 		
-		// creamos un array y guardamos 6 objetos
 		Instrumento listaInstrumentos[] = new Instrumento [6];
 		
 		listaInstrumentos[0] = new InstrumentoViento("Flauta",150);
@@ -17,8 +16,7 @@ public class App_musica {
 		listaInstrumentos[4] = new InstrumentoCuerda("Violín",780);
 		listaInstrumentos[5] = new InstrumentoCuerda("Guitarra",780);
 		
-		
-		// visualizacion de la lista
+	
 		
 		for(Instrumento i: listaInstrumentos) {
 			
