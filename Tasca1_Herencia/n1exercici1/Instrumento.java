@@ -22,8 +22,6 @@ public abstract class Instrumento {
 		
 	}
 	
-	// Getters
-	
 	public String getNombre() {
 		
 		return nombre;

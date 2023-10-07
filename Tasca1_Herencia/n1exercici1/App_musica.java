@@ -24,7 +24,7 @@ public class App_musica {
 			
 			
 			if(i  instanceof InstrumentoCuerda) {
-				InstrumentoCuerda cuerda = (InstrumentoCuerda)i;// realizamos un castin para poder acceder
+				InstrumentoCuerda cuerda = (InstrumentoCuerda)i;
 				System.out.println("Número de cuerdas: "+cuerda.getNumeroCuerdas());
 			}
 			

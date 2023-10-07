@@ -8,11 +8,9 @@ public class InstrumentoCuerda extends Instrumento{
 		System.out.println("La clase InstrumentoCuerdo se ha cargado.");
 		
 	}
-	
-	
-	// Bloque de inicialización de instancia
+
 	{
-	// inicializamos el número de cuerdas segun el tipo de instrumento
+	
 		
 		if(super.getNombre().equalsIgnoreCase("Guitarra")){
 			
