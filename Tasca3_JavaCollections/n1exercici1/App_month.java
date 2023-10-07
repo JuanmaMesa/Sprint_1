@@ -5,11 +5,9 @@ public class App_month {
 
 	public static void main(String[] args) {
 		
-		// we create Arraylist of month object
 		
 		ArrayList<Month> monthsList = new ArrayList<Month>();
 		
-		// add 11 month within August month
 		monthsList.add(new Month("January"));
 		monthsList.add(new Month("February"));
 		monthsList.add(new Month("March"));
@@ -29,30 +27,27 @@ public class App_month {
 			System.out.println(m.getName());
 		}
 		
-		// we insert the month August in position 8(index 7)
+		// position 8(index 7)
 		monthsList.add(7,new Month("August"));
 		
-		
-		// display the Arrayist to demostrate correct order
+	
 		System.out.println("-------");
 		for(Month m: monthsList) {
 			System.out.println(m.getName());
 		}
 	
-	// We convert the arraylist into a Hashset to remove duplicates
+	
 		
 		Set<Month> monthSet = new HashSet<>(monthsList);
 		
 		System.out.println("--- display monthSet ---");
 		
-		
-		// Iterate over the HashSet using a for loop
+	
 		for(Month m:monthSet) {
 			
 			System.out.println(m.getName());
 		}
-		
-		// Iterate over the HashSet using the Iterator
+	
 		
 		System.out.println("__Iterate with Iterator__");
 		

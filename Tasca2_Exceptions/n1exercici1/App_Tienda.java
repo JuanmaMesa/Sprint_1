@@ -6,7 +6,6 @@ public class App_Tienda {
 		
 		Venta venta1 = new Venta();
 		
-		// ---- calculamos el precio total sin agregar productos----
 		try {
 			venta1.calcularTotal();
 		
@@ -18,16 +17,13 @@ public class App_Tienda {
 		Producto producto1 = new Producto("Zanahorias", 12.5);
 		Producto producto2 = new Producto("pan", 1.5);
 		Producto producto3 = new Producto("Guisantes", 0.79);
-		
-		
-		// añadimos productos aL pedido
+	
 		
 		venta1.agregarProducto(producto1);
 		venta1.agregarProducto(producto2);
 		venta1.agregarProducto(producto3);
 		
-		
-		// calculamos con productos en la lista
+	
 		try {
 			venta1.calcularTotal();
 			

@@ -2,31 +2,24 @@ package n1exercici2;
 
 public class Coche {
 
-	
-	// atrubutos propios de la clase
-	private static final String MARCA = "Seat";// Constante
-	private static String modelo; // atributo estatico
+
+	private static final String MARCA = "Seat";
+	private static String modelo; 
 	
 	
 	private final int potencia;
-
 	
-	// constructor
 	public Coche(int potencia) {
 		
 		 this.potencia = potencia;
 		 modelo = "Ibiza";
 
-	}
-	
-	// Setters
-	
+	}	
 	public void setModelo(String nuevoModelo) {
 		
 		modelo = nuevoModelo;
 	}
 	
-	// Getters
 	
 	public static String getMarca() {
 		

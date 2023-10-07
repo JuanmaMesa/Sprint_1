@@ -7,7 +7,7 @@ import java.util.ListIterator;
 public class ListInteger {
 
 	public static void main(String[] args) {
-		// Create 2 list of Integer
+	
 		List<Integer> myList = new ArrayList<>();
 		List<Integer>MyListInverse = new ArrayList<>();
 		
@@ -16,8 +16,6 @@ public class ListInteger {
 			myList.add(indice);
 			
 		}
-		
-		// using Iterator to read 
 		
 		System.out.println("--- using Iterator ---");
 		
@@ -28,7 +26,7 @@ public class ListInteger {
 			Integer num = myIterator.next();
 			System.out.println(num);
 		}
-		// adding inverse elements
+	
 		System.out.println(".....");
 		ListIterator<Integer> myIterator1 = myList.listIterator(myList.size());// now iterator is at the end
 		
@@ -39,7 +37,6 @@ public class ListInteger {
 			
 		}
 		
-		// display the elements of the myListinverse
 		for(Integer num : MyListInverse) {
 			System.out.println(num);
 			

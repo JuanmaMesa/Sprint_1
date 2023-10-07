@@ -15,9 +15,6 @@ public class Venta {
 		
 	}
 	
-	
-	// Getters
-	
 	public double getPrecioTotal() {
 		
 		return precioTotal;
@@ -31,7 +28,6 @@ public class Venta {
 	public void agregarProducto(Producto nombre) {
 		
 		productos.add(nombre);
-		//precioTotal+= nombre.getPrecio();
 		
 	}
 	
