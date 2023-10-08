@@ -6,7 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry excluding="src/|Tasca1_Herencia/|Laboratorio/|Tasca2_Exceptions/|Tasca3_JavaCollections/" kind="src" path=""/>
+	<classpathentry kind="src" path="Tasca4_Testing"/>
 	<classpathentry kind="src" path="Tasca1_Herencia"/>
 	<classpathentry kind="src" path="Laboratorio"/>
 	<classpathentry kind="src" path="Tasca2_Exceptions"/>

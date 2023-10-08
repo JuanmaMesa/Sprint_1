@@ -12,8 +12,6 @@ public class Producto {
 		
 	}
 	
-	//getters
-	
 	public String getNombre() {
 		
 		return nombre;
@@ -23,8 +21,7 @@ public class Producto {
 		
 		return precio;
 	}
-	
-	// setters
+
 	
 	public void setPrecio(int nuevoPrecio) {
 		
