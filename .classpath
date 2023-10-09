@@ -11,5 +11,6 @@
 	<classpathentry kind="src" path="Laboratorio"/>
 	<classpathentry kind="src" path="Tasca2_Exceptions"/>
 	<classpathentry kind="src" path="Tasca3_JavaCollections"/>
+	<classpathentry kind="src" path="Tasca4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
