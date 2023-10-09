@@ -6,7 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="Tasca4_Testing"/>
 	<classpathentry kind="src" path="Tasca1_Herencia"/>
 	<classpathentry kind="src" path="Laboratorio"/>
 	<classpathentry kind="src" path="Tasca2_Exceptions"/>
