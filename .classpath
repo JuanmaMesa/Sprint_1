@@ -11,6 +11,7 @@
 	<classpathentry kind="src" path="Tasca2_Exceptions"/>
 	<classpathentry kind="src" path="Tasca3_JavaCollections"/>
 	<classpathentry kind="src" path="Tasca4_Testing"/>
+	<classpathentry kind="src" path="Tasca5_Java.IO"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

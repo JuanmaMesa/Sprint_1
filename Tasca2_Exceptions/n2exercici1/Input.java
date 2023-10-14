@@ -19,7 +19,7 @@ public class Input {
 				System.out.println("byte entered: "+result);
 				isTrue = true;
 			}catch(InputMismatchException e) {
-				System.out.println("InputMismatchException: Enter a correct byte ");
+				System.out.println("InputMismatchException: Please enter a valid byte ");
 				input.nextLine();// limpieza de buffer
 				
 			}
@@ -28,7 +28,7 @@ public class Input {
 		return result;
 		}
 	
-	public static Integer readint(String message) {
+	public static int readInt(String message) {
 		
 		int result = 0 ;
 		boolean isTrue = false;
@@ -40,7 +40,7 @@ public class Input {
 				System.out.println("Int entered: "+result);
 				isTrue = true;
 			}catch(InputMismatchException e) {
-				System.out.println("InputMismatchException: Error! enter a correct int.");
+				System.out.println("InputMismatchException: Error! Plesase enter a valid int.");
 				input.next();
 			}
 		}while(!isTrue);
@@ -49,16 +49,38 @@ public class Input {
 	}
 	
 	public static String readString(String message) {
+		String result = "" ;
 		boolean isTrue = false;
-		String result ="";
 		
 		do {
 			try {
 				System.out.println(message + ": ");
-				result = input.next();
+				result = input.nextLine();
 				System.out.println("String entered: "+result);
+				isTrue = true;
+			}catch(Exception e) {
+				System.out.println("Exception: Error! Plesase enter a valid String.");
+				input.next();
+			}
+		}while(!isTrue);
+		
+		return result;
+		
+	}
+	
+	public static float readFloat(String message) {
+		
+		float result = 0f ;
+		boolean isTrue = false;
+		
+		do {
+			try {
+				System.out.println(message + ": ");
+				result = input.nextFloat();
+				System.out.println("Float entered: "+result);
+				isTrue = true;
 			}catch(InputMismatchException e) {
-				System.out.println("InputMismatchException: Error! Enter a correct String");
+				System.out.println("InputMismatchException: Error! Plesase enter a valid float.");
 				input.next();
 			}
 		}while(!isTrue);
@@ -66,7 +88,71 @@ public class Input {
 		return result;
 	}
 
+	public static double readDouble(String message) {
+	
+		double result = 0 ;
+		boolean isTrue = false;
+	
+		do {
+			try {
+				System.out.println(message + ": ");
+				result = input.nextDouble();
+				System.out.println("double entered: "+result);
+				isTrue = true;
+			}catch(InputMismatchException e) {
+				System.out.println("InputMismatchException: Error! Plesase enter a valid double.");
+				input.next();
+			}
+		}while(!isTrue);
+	
+		return result;
+	}
+	
+	public static char readChart(String message) {
 		
+		char result = ' ' ;
+		boolean isTrue = false;
+		
+		do {
+			try {
+				System.out.println(message + ": ");
+				result = input.nextLine().charAt(0);
+				System.out.println("Char entered: "+result);
+				isTrue = true;
+			}catch(Exception e) {
+				System.out.println("Exception: Error! Plesase enter a valid char.");
+				input.next();
+			}
+		}while(!isTrue);
+		
+		return result;
+	}
+	
+	public static boolean readYesNot(String message) {
+		boolean result = false;
+		boolean isTrue = false;
+		
+		do {
+			System.out.println(message + ": ");
+			String response = input.nextLine();
+			
+			if(response.equalsIgnoreCase("y")) {
+				result = true;
+				isTrue = true;
+			}else if( response.equalsIgnoreCase("n")) {
+				isTrue = true;
+			}else {
+				System.out.println("Please enter 'y' or 'n'");
+			}
+			
+		}while(!isTrue);
+		
+		return result;
 		
 	}
+	
+	
+
+		
+}
 
