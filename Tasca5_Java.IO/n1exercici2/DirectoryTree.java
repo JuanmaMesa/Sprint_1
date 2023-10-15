@@ -42,6 +42,11 @@ public class DirectoryTree {
 					for(File f: files) {
 						//System.out.println(f.getName());
 						printInfoFiles(f);
+						
+						if(f.isDirectory()) {
+							System.out.println(" --- SubFile ---");
+							verificationDirectory(f);// llamada recursiva
+						}
 					}
 				}else {
 					System.out.println("The directory path is empty.");
@@ -55,15 +60,19 @@ public class DirectoryTree {
 		
 		public void printInfoFiles(File file) {
 		
-			SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM YYY -- HH:mm",new Locale("ca","Cat"));
-			String dateFormated = dateFormat.format(file.lastModified());
-			String fileType = file.isFile() ? "F":"D";
+			SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM YYY - HH:mm",new Locale("ca","Cat"));
 			
-			System.out.println("Type: "+fileType);
-			System.out.println("Name: "+file.getName());
-			System.out.println("Las Modificated: "+dateFormated );
+			try {
+				String dateFormated = dateFormat.format(file.lastModified());
+				String fileType = file.isFile() ? "F":"D";
 			
-		
+				System.out.println("Type: "+fileType);
+				System.out.println("Name: "+file.getName());
+				System.out.println("Last Modificated: "+dateFormated );
+			
+			} catch (Exception e) {
+				System.out.println("Error, file not read");
+			}
 			
 			
 		}

@@ -108,7 +108,7 @@ public class Input {
 		return result;
 	}
 	
-	public static char readChart(String message) {
+	public static char readChar(String message) {
 		
 		char result = ' ' ;
 		boolean isTrue = false;
@@ -116,7 +116,7 @@ public class Input {
 		do {
 			try {
 				System.out.println(message + ": ");
-				result = input.nextLine().charAt(0);
+				result = input.next().charAt(0);
 				System.out.println("Char entered: "+result);
 				isTrue = true;
 			}catch(Exception e) {
@@ -128,7 +128,7 @@ public class Input {
 		return result;
 	}
 	
-	public static boolean readYesNot(String message) {
+	public static boolean readYesNo(String message) {
 		boolean result = false;
 		boolean isTrue = false;
 		
