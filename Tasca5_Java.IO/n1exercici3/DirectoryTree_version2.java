@@ -7,7 +7,7 @@ import java.util.Locale;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.File;
+
 
 import n1exercici1.MyComparator;
 
@@ -40,17 +40,16 @@ public class DirectoryTree_version2 {
 			if(files != null) {
 				Arrays.sort(files, new MyComparator());
 				
-				StringBuilder content = new StringBuilder();// acumula contenido si append es false
-				
 				for(File f: files) {
-					//System.out.println(f.getName());
-					printInfoFiles(f,content);
+					
+					printInfoFiles(f, fileWriter);
 					
 					if(f.isDirectory()) {
 						
 						verificationDirectory(f, fileWriter);// llamada recursiva	
 					}
 				}
+				
 			}else {
 				System.out.println("The directory path is empty.");
 			}
@@ -61,7 +60,7 @@ public class DirectoryTree_version2 {
 	
 	}
 	
-	public void printInfoFiles(File file, StringBuilder content) {
+	public void printInfoFiles(File file, FileWriterReader fileWriter) {
 	
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM YYY - HH:mm",new Locale("ca","Cat"));
 		
@@ -69,11 +68,11 @@ public class DirectoryTree_version2 {
 			String dateFormated = dateFormat.format(file.lastModified());
 			String fileType = file.isFile() ? "F":"D";
 			
-			String info = "\nType: "+fileType +" Name: "+ file.getName() + "Last modificated: "+ dateFormated+"\n";
+			String info = "Type: "+fileType +" Name: "+ file.getName() + "Last modified: "+ dateFormated+"\n";
 			
-			content.append(info);
+			fileWriter.saveToFile(info);
 		} catch (Exception e) {
-			System.out.println("Error, file not read");
+			System.out.println("Error, Unable to read the file");
 		}
 		
 		
