@@ -4,10 +4,10 @@ package n2exercici1;
 public class App {
 
 	public static void main(String[] args) {
-	menu();
-		
-		
-		
+	
+		menu();
+
+
 	}
 	
 	
@@ -28,13 +28,12 @@ public class App {
 				break;
 			case 2:
 				exit = true;
-				System.out.println("Goodbye, I hope I see you soon");
 				break;
 			default:
 				System.out.println("Invalid choice, please write '1' or '2' ");
 				break;
 		}
-			
+			System.out.println("Goodbye, I hope I see you soon");
 			
 		}
 			
@@ -42,24 +41,31 @@ public class App {
 		
 	public static void answerQuestions() {
 		
-		boolean response = Input.readYesNo("Do you want to answer a few questions?");
 		
-		String name = Input.readString("What is your name?");
 		
-		byte age = Input.readByte("What is your age?");
+		boolean response = Input.readYesNo("Do you want to continue?");
 		
-		float decimal = Input.readFloat("Tell me a decimal number");
+		if(response) {
+			String name = Input.readString("What is your name?");
+			byte age = Input.readByte("What is your age?");
+				
+			if( age > 0) {
+				float decimal = Input.readFloat("Tell me a decimal number");
+				double doubleNumber = Input.readDouble("Tell me another decimal number");
+				char letter = Input.readChar("Tell me a letter");
+			}else {
+				System.out.println("Sorry, you have entered a non positive number");
+				 age = Input.readByte("What is your age?");
+				 float decimal = Input.readFloat("Tell me a decimal number");
+				 double doubleNumber = Input.readDouble("Tell me another decimal number");
+				 char letter = Input.readChar("Tell me a letter");
+					
+			}
+		
+		}
+		
 	
-		double doubleNumber = Input.readDouble("Tell me another decimal number");
-		
-		char letter = Input.readChar("Tell me a letter");
-		
-		
-	
-		
+				
 	}
 		
-		
-	
-
 }

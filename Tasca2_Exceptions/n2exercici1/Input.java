@@ -23,6 +23,7 @@ public class Input {
 				input.nextLine();// limpieza de buffer
 				
 			}
+			
 		} while(!isTrue);
 		
 		return result;
@@ -63,7 +64,7 @@ public class Input {
 				input.next();
 			}
 		}while(!isTrue);
-		
+	
 		return result;
 		
 	}
@@ -104,7 +105,7 @@ public class Input {
 				input.next();
 			}
 		}while(!isTrue);
-	
+		
 		return result;
 	}
 	
@@ -139,8 +140,10 @@ public class Input {
 			if(response.equalsIgnoreCase("y")) {
 				result = true;
 				isTrue = true;
+				System.out.println("Entered: "+result);
 			}else if( response.equalsIgnoreCase("n")) {
 				isTrue = true;
+				System.out.println("Entered: "+result);
 			}else {
 				System.out.println("Please enter 'y' or 'n'");
 			}
@@ -149,10 +152,10 @@ public class Input {
 		
 		return result;
 		
+		
 	}
 	
 	
-
 		
 }
 
