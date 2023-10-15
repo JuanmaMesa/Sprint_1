@@ -6,14 +6,14 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import n1exercici2.DniValid;
+import n1exercici2.CalculoDni;
 
 class Testdni {
 
 	@ParameterizedTest
     @ValueSource(ints = {48742586, 98765432, 46464982, 22458578, 45448452, 46464981, 55555556, 44181931 })
-	void TestIsDniTrue(int numDni) {
-		assertTrue(DniValid.isDniTrue(numDni));
+	void TestIsValidDniNumber(int numDni) {
+		assertTrue(CalculoDni.isDniTrue(numDni));
 		
 	}
 	
@@ -30,7 +30,7 @@ class Testdni {
     	})
 	void TestCalculateLetter(int numDni, char expected) {
 		
-		char letter = DniValid.calculateLetter(numDni);
+		char letter = CalculoDni.calculateLetter(numDni);
 		assertEquals(expected,letter);
 	}
 
