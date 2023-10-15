@@ -4,6 +4,7 @@ import java.util.Map;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.ArrayList;
@@ -16,29 +17,25 @@ public class CountriesGame {
 	public static void main(String[] args) {
 		
 
-		String CountriesFile = "/home/juanma/eclipse-workspace/Sprint1/Tasca3_JavaCollections/n1exercisi3/countries.txt";
-		
-		menu(loadCountries(CountriesFile));
+		String countriesFile = "/home/juanma/eclipse-workspace/Sprint1/Tasca3_JavaCollections/n1exercisi3/countries.txt";
+		HashMap<String, String> countries = loadCountries(countriesFile);
+		menu(countries);
 		
 				
 		}
+	
 
-	
-	
-	
-	
-	
-		
 	 public static void menu(HashMap<String, String> countries) {
 	
 		 boolean isfinish = false;
 		
 		 if(countries.isEmpty()) {
-			 System.out.println("loading.... ups!!! an error has been detected!! Please try again later." );
+			 System.out.println("loading.... opps!!! An error has been detected!! Please try again later." );
 		
 		 }else {
-		 while(!isfinish) {
 			 System.out.println("=== Welcome to Countries Game ===");
+		
+			 while(!isfinish) {
 			 System.out.println("---- Menu ----");
 			int option = getnumber("Chose a number:\n1: Start Game\n2. Exit");
 			
@@ -46,6 +43,7 @@ public class CountriesGame {
 			
 			case 1:
 				game(countries);
+				isfinish = true;
 				break;
 			case 2:
 				System.out.println("Goodbye, I hope see you soon!!");
@@ -55,17 +53,15 @@ public class CountriesGame {
 				System.out.println("Error, choose another number: 1-2");
 				
 			}
-		 }
+		  }
 		}
 	 }
 	 
 	 public static void game(HashMap<String, String> countries) {
 		ArrayList<Map.Entry<String, String>>entryList = new ArrayList<>(countries.entrySet());
 		 
-		
 		int indice = 0;
-		int point = 0;
-		
+		int points = 0;
 		String name = getname("What's your name.");
 		
 		while(indice < 10) {
@@ -77,37 +73,33 @@ public class CountriesGame {
 					String country = entry.getKey();
 					String capital = entry.getValue();
 			
-				
-		
 					System.out.println(country);
 					String city = getname("What is the capital");
 			
 					if(capital.equalsIgnoreCase(city) ) {
 						System.out.println("Correct!");
-						point++;
+						points++;
 					}else {
-					System.out.println("upps, you are wrong!");
+					System.out.println("Oopps, you are wrong!");
 					}
-					System.out.println("total points: "+point);
+		
 					indice++;
 					}
 				
-			System.out.println("Finish!! well done\n"+"user:"+name+" Total points: "+point);
-				}
-	 		}
-		}
+				
+			}
+	 	}
+		System.out.println("Finish!! well done\n"+"user: "+name+" Total points: "+points);
+		saveScore(name, points);
+	}
 	 
-	 
-	 
-
 	 public static HashMap<String, String> loadCountries(String filename){
 		 
-		 System.out.println("EStoy en loadCountries");
 		 HashMap<String,String>countries = new HashMap<>();
 		 
 		 try {
-			BufferedReader br = new BufferedReader(new FileReader(filename));
-			String line;
+			 BufferedReader br = new BufferedReader(new FileReader(filename));
+			 String line;
 			
 			while((line = br.readLine()) != null  ) {
 				
@@ -133,14 +125,12 @@ public class CountriesGame {
 		 
 	 }
 		 
-
-	
 	public static String getname(String message) {
 		
 		Scanner input = new Scanner(System.in);
 		System.out.println(message);
 		String name = input.nextLine();
-		input.close();
+		
 		return name;	
 	}
 
@@ -148,7 +138,25 @@ public class CountriesGame {
 		Scanner input = new Scanner(System.in);
 		System.out.println(message);
 		int number = input.nextInt();
-		input.close();
+	
 		return number;
+		
 	}
+	
+	public static void saveScore(String name, int points) {
+		
+		try {
+			FileWriter writer = new FileWriter("classificacio.txt", true);
+			writer.write("User: " +name+ ", Total Points: "+points+"\n");
+			writer.close();
+		}catch(IOException e) {
+			System.out.println("IOException: "+ e.getMessage());
+			
+		}
+
+	}
+	
+	
+	
+	
 }

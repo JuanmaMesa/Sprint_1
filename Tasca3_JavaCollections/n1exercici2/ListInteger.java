@@ -26,13 +26,14 @@ public class ListInteger {
 			Integer num = myIterator.next();
 			System.out.println(num);
 		}
-	
-		System.out.println(".....");
-		ListIterator<Integer> myIterator1 = myList.listIterator(myList.size());// now iterator is at the end
 		
-		while(myIterator1.hasPrevious()) {
+		System.out.println(".....");
+
+		ListIterator<Integer> myListIterator = myList.listIterator(myList.size());// now iterator is at the end
+		
+		while(myListIterator.hasPrevious()) {
 			
-			Integer num = myIterator1.previous();
+			Integer num = myListIterator.previous();
 			MyListInverse.add(num);
 			
 		}
