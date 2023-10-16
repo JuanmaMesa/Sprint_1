@@ -38,6 +38,12 @@ public class ObjectTest implements Serializable {
 		
 	}
 	
+	@Override
+	public String toString() {
+		return "Name: "+ name +", Age: "+age;
+		
+	}
+	
 	
 	
 	
