@@ -33,13 +33,13 @@ public class FileWriterReader {
 	
 	public String readFromFile() {
 		
-		try {
-			BufferedReader reader = new BufferedReader(new FileReader(filePath));
+		try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
 			StringBuilder content = new StringBuilder();
 			String line;
 			
 			while((line = reader.readLine()) != null){
 				content.append(line).append("\n");
+				
 			
 			}
 			return content.toString();
