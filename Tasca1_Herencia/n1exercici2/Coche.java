@@ -3,16 +3,20 @@ package n1exercici2;
 public class Coche {
 
 
-	private static final String MARCA = "Seat";
+	private static final String MARCA; 
 	private static String modelo; 
-	
-	
 	private final int potencia;
+	
+	static {
+		
+		MARCA = "Seat";
+		modelo = "Ibiza";
+		
+	}
 	
 	public Coche(int potencia) {
 		
 		 this.potencia = potencia;
-		 modelo = "Ibiza";
 
 	}	
 	public void setModelo(String nuevoModelo) {

@@ -14,11 +14,11 @@ public class app_vehiculo {
 
 		System.out.println("----");
 		System.out.println(micocheSeat.acelerar());
-		System.out.println(micocheSeat.frenar());
+		System.out.println(Coche.frenar());
 		
 		System.out.println("----");
-		System.out.println("Marca: "+micocheSeat.getMarca());
-		System.out.println("Modelo: "+micocheSeat.getModelo());
+		System.out.println("Marca: "+Coche.getMarca());
+		System.out.println("Modelo: "+Coche.getModelo());
 		System.out.println("Potencia. "+micocheSeat.getPotencia());
 		
 		
