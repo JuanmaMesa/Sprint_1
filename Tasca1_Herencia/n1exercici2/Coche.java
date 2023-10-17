@@ -14,9 +14,8 @@ public class Coche {
 		
 	}
 	
-	public Coche(int potencia) {
-		
-		 this.potencia = potencia;
+	public Coche() {
+		potencia = 1100;
 
 	}	
 	public void setModelo(String nuevoModelo) {

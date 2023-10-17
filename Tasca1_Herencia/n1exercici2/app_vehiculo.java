@@ -7,8 +7,8 @@ public class app_vehiculo {
 		System.out.println(Coche.frenar());
 		
 		
-		Coche micocheSeat = new Coche(1100);
-		Coche micocheSeat1 = new Coche(2000);
+		Coche micocheSeat = new Coche();
+		Coche micocheSeat1 = new Coche();
 		
 		
 
