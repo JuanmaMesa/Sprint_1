@@ -1,7 +1,7 @@
 package n1Exercici1;
 
 public class Online_Employee extends Employee {
-	private static final float PRICE_INTERNET = 40.60f;
+	private static final float PRICE_INTERNET = 40.62f;
 	
 	public Online_Employee(String name, String Surname,float price_hour) {
 		
@@ -11,8 +11,12 @@ public class Online_Employee extends Employee {
 	
 	@Override
 	public double calculateSalary(float numberHours_month) {
-		double salary = (numberHours_month * super.getPrice_hour())+PRICE_INTERNET ;
+		double salary = ((numberHours_month * super.getPrice_hour())+PRICE_INTERNET);
+		String formattSalary = String.format("%.2f", salary) ;
+		salary = Double.parseDouble(formattSalary);
+		
 		return salary;
+		
 	}
 
 }
