@@ -4,11 +4,11 @@ public class App_generics {
 
 	public static void main(String[] args) {
 	
-		float floatnumber =3.14f;
-		
 		GenericMethods generics = new GenericMethods();
-		
-		generics.printGenericArguments(floatnumber,new Persona().getClass(),27 );
+	
+		float floatnumber =3.14f;
+	
+		generics.printGenericArguments(floatnumber,27,new Persona().getClass() );
 		
 		System.out.println("---Segunda prueba---");
 		

@@ -6,7 +6,7 @@ public class App_Generics {
 		
 		GenericMethods generics = new GenericMethods();
 		
-		generics.printGenericArguments(25, "Marcos", false);
+		generics.printGenericArguments(25, "Marcos", false);// booelan es obligatorio
 		
 
 	}

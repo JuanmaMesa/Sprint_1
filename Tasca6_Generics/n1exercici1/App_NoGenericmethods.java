@@ -8,6 +8,10 @@ public class App_NoGenericmethods {
 		NoGenericMethods obj2 = new NoGenericMethods("Barcelona", "Juanma", "Sanchez");
 		NoGenericMethods obj3 = new NoGenericMethods("Sanchez", "Barcelona", "Juanma");
 		
+		// podemos ponerlos en cual orden pero...
+		
+		System.out.println(obj1.getCity());
+		System.out.println(obj2.getCity());
 
 	}
 

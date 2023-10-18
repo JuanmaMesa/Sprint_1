@@ -13,6 +13,7 @@
 	<classpathentry kind="src" path="Tasca4_Testing"/>
 	<classpathentry excluding="n2exercici1/" kind="src" path="Tasca5_Java.IO"/>
 	<classpathentry kind="src" path="Tasca6_Generics"/>
+	<classpathentry kind="src" path="Tasca7_Annotations"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
