@@ -1,4 +1,4 @@
-package n1Exercici1;
+package n1exercici1;
 
 public class Employee {
 	
@@ -42,4 +42,17 @@ public class Employee {
 		double salary = numberHours * price_hour;
 		return salary;
 	}
+	
+	public void infoSalary(float numerHours, double salary) {
+		
+		System.out.println("  --- information nomina ---\n"+
+		"Number hours: "+ numerHours + "\nprice hour:"+price_hour+"\nTotal month: " +salary);
+		
+		
+		
+	}
+		
+		
+		
+	
 }
