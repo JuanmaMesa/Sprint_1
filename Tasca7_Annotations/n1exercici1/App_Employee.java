@@ -15,7 +15,8 @@ public class App_Employee {
 		
 	
 		//workerOnline1.calculateSalary(numberHours_month);
-		workerOnline1.infoSalary(numberHours_month, workerOnline1.calculateSalary(numberHours_month));
+		//workerOnline1.infoSalary(numberHours_month, workerOnline1.calculateSalary(numberHours_month));
+		
 		
 		
 		
