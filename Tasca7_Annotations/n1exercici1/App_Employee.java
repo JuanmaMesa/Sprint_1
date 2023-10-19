@@ -4,26 +4,17 @@ public class App_Employee {
 
 	public static void main(String[] args) {
 		
-		float numberHours_month = 120;
-		Online_Employee workerOnline1 = new Online_Employee("Mark", "Spriler", 29);
+		float totalHoursOctober = 120;
+		Online_Employee workerOnline1 = new Online_Employee("Mark", "Spriler", 29.6f);
 		
-		OnSite_Employee workerOnSite1 = new OnSite_Employee("John","Bull", 42);
+		OnSite_Employee workerOnSite1 = new OnSite_Employee("John","Bull", 29.6f);
 		
+		System.out.println(workerOnline1.calculateSalary(totalHoursOctober));
+		System.out.println(workerOnSite1.calculateSalary(totalHoursOctober));
 		
-		
-		
-		
-	
-		//workerOnline1.calculateSalary(numberHours_month);
-		//workerOnline1.infoSalary(numberHours_month, workerOnline1.calculateSalary(numberHours_month));
-		
-		
-		
-		
-		
-		//System.out.println("Salary October: "+ workerOnSite1.calculateSalary(numberHours_month));
-		
-	
+		workerOnline1.infoSalary(totalHoursOctober);
+		System.out.println("--------");
+		workerOnSite1.infoSalary(totalHoursOctober);
 		
 
 	}

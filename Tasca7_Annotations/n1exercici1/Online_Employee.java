@@ -1,7 +1,9 @@
 package n1exercici1;
 
+import java.text.DecimalFormat;
+
 public class Online_Employee extends Employee {
-	private static final float PRICE_INTERNET = 40.60f;
+	private static final float BONUS_INTERNET = 41.55f;
 	
 	public Online_Employee(String name, String Surname,float price_hour) {
 		
@@ -11,10 +13,23 @@ public class Online_Employee extends Employee {
 	
 	@Override
 	public double calculateSalary(float numberHours_month) {
-		double salary = ((numberHours_month * super.getPrice_hour())+PRICE_INTERNET);
 		
-		//String formattSalary = String.format("%.3f", salary) ;
-		//salary =Double.parseDouble(formattSalary);
-		return salary; 
+		double baseSalary = super.calculateSalary(numberHours_month);
+		double totalSalary = baseSalary +BONUS_INTERNET;
+		
+		totalSalary = Math.round(totalSalary*100.0)/100.0;
+	
+	   return totalSalary; 
+	}
+	
+
+	
+	@Override
+	public void infoSalary(float numbersHours) {
+		
+		super.infoSalary(numbersHours);
+		System.out.println("Bonus Internet: "+BONUS_INTERNET+ "\nTotal salary: "+calculateSalary(numbersHours));
+		
+
 	}
 }

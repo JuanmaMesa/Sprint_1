@@ -5,7 +5,7 @@ public class Employee {
 	private String name, surName;
 	private float price_hour;
 	
-	public Employee(String name, String Surname, float preu_hora) {
+	public Employee(String name, String surName, float preu_hora) {
 		
 		this.name = name;
 		this.surName = surName;
@@ -37,16 +37,18 @@ public class Employee {
 		this.price_hour = preu_hora;
 	}
 
-	public double calculateSalary (float numberHours) {
+	public double calculateSalary (float numberOfHours) {
 		
-		double salary = numberHours * price_hour;
-		return salary;
+		double baseSalary = numberOfHours * price_hour;
+		return baseSalary;
 	}
 	
-	public void infoSalary(float numerHours, double salary) {
+	public void infoSalary(float numerOfHours) {
+		
+		double salary = calculateSalary(numerOfHours); 
 		
 		System.out.println("  --- information nomina ---\n"+
-		"Number hours: "+ numerHours + "\nprice hour:"+price_hour+"\nTotal month: " +salary);
+		"Number of hours: "+ numerOfHours + "\nprice hour: "+price_hour);
 		
 		
 		
