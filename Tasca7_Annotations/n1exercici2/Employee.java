@@ -1,28 +1,58 @@
 package n1exercici2;
-import n1exercici1.Employee;
+public class Employee {
+	
+	private String name, surName;
+	private float price_hour;
+	
+	public Employee(String name, String surName, float preu_hora) {
+		
+		this.name = name;
+		this.surName = surName;
+		this.price_hour = preu_hora;
+		
+	}
 
-public class Online_Employee extends Employee {
-	private static final float PRICE_INTERNET = 40.60f;
-	
-	public Online_Employee(String name, String Surname,float price_hour) {
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSurName() {
+		return surName;
+	}
+
+	public void setSurName(String surName) {
+		this.surName = surName;
+	}
+
+	public float getPrice_hour() {
+		return price_hour;
+	}
+
+	public void setPrice_hour(float preu_hora) {
+		this.price_hour = preu_hora;
+	}
+
+	public double calculateSalary (float numberOfHours) {
 		
-		super(name,Surname, price_hour);
-		
+		double baseSalary = numberOfHours * price_hour;
+		return baseSalary;
 	}
 	
-	@Override
-	public double calculateSalary(float numberHours_month) {
-		double salary = super.calculateSalary(numberHours_month)+ PRICE_INTERNET;
-		return salary; 
-	}
-	
-	
-	@Override
-	public void infoSalary(float numberHours, double salary) {
-		super.infoSalary(numberHours, salary ) ; 
-		System.out.println("Plus interner: "+ PRICE_INTERNET);
+	public void infoSalary(float numerOfHours) {
 		
+		double salary = calculateSalary(numerOfHours); 
 		
+		System.out.println("  --- information nomina ---\n"+
+		"Number of hours: "+ numerOfHours + "\nprice hour: "+price_hour);
 		
 	}
+		
+		
+	
+		
+	
 }
