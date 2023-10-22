@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class App_lambda {
+public class StringFilter {
 
 	public static void main(String[] args) {
 		
@@ -13,7 +13,8 @@ public class App_lambda {
 		
 		List<String> filteredNames = filterStrings(names);
 		
-		filteredNames.forEach(s -> System.out.println(s));
+		printFilterStrings(filteredNames);
+	
 				
 	}
 
@@ -24,6 +25,15 @@ public class App_lambda {
 				.filter((s) -> s.toLowerCase().contains("o")  && s.length() >= 5)
 				.collect(Collectors.toList());
 			
-					
 	}
+	
+	public static void printFilterStrings(List<String> filteredString) {
+		
+		filteredString.forEach(string -> System.out.println(string));
+		
+		
+		
+		
+	}
+	
 }
