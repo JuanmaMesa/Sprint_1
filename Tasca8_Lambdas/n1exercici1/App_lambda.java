@@ -17,10 +17,11 @@ public class App_lambda {
 				
 	}
 
+	
 	public static List<String> filterStrings(ArrayList<String>strings){
 		
 		return strings.stream()
-				.filter((s) -> s.toLowerCase().contains("o"))
+				.filter((s) -> s.toLowerCase().contains("o")  && s.length() >= 5)
 				.collect(Collectors.toList());
 			
 					
