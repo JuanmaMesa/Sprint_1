@@ -22,7 +22,7 @@ public class StringFilter {
 	public static List<String> filterStrings(ArrayList<String>strings){
 		
 		return strings.stream()
-				.filter((s) -> s.toLowerCase().contains("o")  && s.length() >= 5)
+				.filter((s) -> s.toLowerCase().contains("o"))
 				.collect(Collectors.toList());
 			
 	}
