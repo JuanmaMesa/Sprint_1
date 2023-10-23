@@ -9,7 +9,7 @@ public class StringFilter {
 
 	public static void main(String[] args) {
 		
-		ArrayList<String> names = new ArrayList<>(Arrays.asList("John","mouse","number","paper","Orlando","Sunday"));
+		ArrayList<String> names = new ArrayList<>(Arrays.asList("John","mouse","number","paper","Ockland","Sunday"));
 		
 		List<String> filteredNames = filterStrings(names);
 		
@@ -22,7 +22,7 @@ public class StringFilter {
 	public static List<String> filterStrings(ArrayList<String>strings){
 		
 		return strings.stream()
-				.filter((s) -> s.toLowerCase().contains("o"))
+				.filter( (s) -> s.toLowerCase().contains("o"))
 				.collect(Collectors.toList());
 			
 	}
