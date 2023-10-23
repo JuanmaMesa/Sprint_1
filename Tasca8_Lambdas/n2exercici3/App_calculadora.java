@@ -14,7 +14,7 @@ public class App_calculadora {
 		System.out.println("suma -> "+addiction.operations(5, 5, 6));
 		System.out.println("resta -> "+subtract.operations(5, 6, 6));
 		System.out.println("multiplicacion -> "+multiply.operations(5, 5, 6.9f));
-		System.out.println("division -> "+division.operations(5, 5, 6));
+		System.out.println("division -> "+division.operations(5, 5, 0));
 	
 		
 		
