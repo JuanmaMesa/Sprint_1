@@ -1,6 +1,5 @@
 package n2exercici3;
 
-import javax.management.OperationsException;
 
 public class App_calculadora {
 
