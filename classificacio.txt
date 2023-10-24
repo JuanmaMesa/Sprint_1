@@ -2,3 +2,4 @@ User: Xavier, Total Points: 0
 User: Juanma, Total Points: 9
 User: Anna, Total Points: 4
 User: f, Total Points: 0
+User: juanma, Total Points: 0

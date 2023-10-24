@@ -53,11 +53,13 @@ public class Restaurant implements Comparable<Restaurant> {
 		return Objects.equals(name, other.name) && (rating == other.rating);
 	}
 	
+	
+
+
 	@Override
-	public int Compare(Restaurant rest1, Restaurant rest2) {
+	public int compareTo(Restaurant o) {
 		
-		return Integer.compare(rest1.rating, rest2.rating);
-		
+		return 0;
 	}
 
 
