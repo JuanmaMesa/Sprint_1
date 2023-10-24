@@ -7,17 +7,31 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 
+import org.hamcrest.core.IsInstanceOf;
+
 public class App_strings {
 
 	public static void main(String[] args) {
 
-		ArrayList<String> stringsArray = new ArrayList<>(Arrays.asList("Joana", "Mark", "Cascos", "Juan Manuel","Piruletas", "Luna"));
+		ArrayList<Object> mixArray = new ArrayList<>(Arrays.asList("Joana", "Mark", 22 ,"Cascos", "Juan Manuel","Piruletas", 54,"Luna"));
 		
-		 Comparator <String> lengthString = (s1, s2) -> Integer.compare(s1.length(), s2.length());
 		 
-		 Collections.sort(stringsArray,lengthString);
-		 
-		 stringsArray.forEach(s -> System.out.println(s));
+		ArrayList<String> stringList = new ArrayList<>();
+		
+		for(Object object : mixArray) {
+			
+			if(object instanceof String) {
+				stringList.add((String)object);
+			}
+			
+		}
+		
+		Comparator<String> lengthString = (s1, s2) -> Integer.compare(s1.length(), s2.length());
+		
+		Collections.sort(stringList,lengthString);
+	
+		
+		stringList.forEach( s  -> System.out.println(s));
 		
 		
 			
