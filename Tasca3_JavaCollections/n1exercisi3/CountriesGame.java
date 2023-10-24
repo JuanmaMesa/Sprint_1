@@ -17,9 +17,14 @@ public class CountriesGame {
 	public static void main(String[] args) {
 		
 
+		try {
 		String countriesFile = "/home/juanma/eclipse-workspace/Sprint1/Tasca3_JavaCollections/n1exercisi3/countries.txt";
 		HashMap<String, String> countries = loadCountries(countriesFile);
 		menu(countries);
+		}catch( Exception e) {
+			System.out.println("Error");
+			
+		}
 		
 				
 		}
