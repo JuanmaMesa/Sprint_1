@@ -15,7 +15,9 @@ public class App_Restaurant   {
 		setRestaurants.add(new Restaurant("Casa Juan", 7));
 		setRestaurants.add(new Restaurant("Casa Juan", 8));
 		setRestaurants.add(new Restaurant("El Diabolo", 5));
+		setRestaurants.add(new Restaurant("Pizzeria LaMamma",5));
 		setRestaurants.add(new Restaurant("Pizzeria LaMamma",8));
+		setRestaurants.add(new Restaurant("Bar Antartida",5));
 		
 		
 		Set<Restaurant> treeSetRestaurants = new TreeSet<>(setRestaurants); 

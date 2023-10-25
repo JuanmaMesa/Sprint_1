@@ -9,10 +9,10 @@ import java.util.Comparator;
 
 
 
-public class App {
+public class App_lab {
 
 	public static void main(String[] args) {
-		ArrayList<Object> objectsArray = new ArrayList<Object>(Arrays.asList(1,"Marta","Numero", 22,"Oscar", -117,"Alma", 5.5 ,"Berto","Cintia"));
+		ArrayList<Object> objectsArray = new ArrayList<Object>(Arrays.asList(1,"Marta","55","Numero", 22,"Oscar", -117,"Alma", 5.5 ,"Berto","Cintia","Antartida"));
 		ArrayList<String> stringsList = new ArrayList<String>();
 		
 		for(Object obj: objectsArray) {
@@ -23,7 +23,8 @@ public class App {
 			}
 		}
 		
-		List<String> orderFilter = stringsList.stream()
+		List<String> orderfilter = stringsList.stream()
+				
 				.sorted((s1, s2) ->{
 					boolean e1 = s1.contains("e");
 					boolean e2 = s2.contains("e");
@@ -32,17 +33,16 @@ public class App {
 				.sorted((s1, s2) -> Integer.compare(s1.charAt(0), s2.charAt(0)))
 				.map( s -> s.replaceAll("a", "4"))
 				.collect(Collectors.toList());
-			
 		
-		System.out.println("Lista ordenada con filtros: "+orderFilter);
-				
+		System.out.println("ordenado por filtro: "+orderfilter);
+	
 		List<Object> onlyNumbers = objectsArray.stream()
 				.filter( n  -> String.valueOf(n).matches("-?\\d+(\\.\\d+)?"))
 				.collect(Collectors.toList());
 		
 		System.out.println("\nNumeros de la lista: " +onlyNumbers);
 		
-		
+		//https://www.cleveritgroup.com/blog/comenzando-con-lambdas-y-streams-en-java
 		
 	}
 

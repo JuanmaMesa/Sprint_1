@@ -12,6 +12,8 @@ public class App_Restaurant {
 		createAndAdd("Diabolo", 8);
 		createAndAdd("Diabolo", 9);
 		createAndAdd("Diabolo", 8);
+		createAndAdd("Pizzeria la Mamma", 7);
+		createAndAdd("Bar Antartida", 5);
 
 				
 		System.out.println("--list of Resturants--");
