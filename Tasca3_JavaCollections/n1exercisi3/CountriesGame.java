@@ -12,14 +12,22 @@ import java.util.Collections;
 import java.util.Scanner;
 
 
+
+
 public class CountriesGame {
 
 	public static void main(String[] args) {
 		
 
-		
-		String countriesFile = "/home/juanma/eclipse-workspace/Sprint1/Tasca3_JavaCollections/n1exercisi3/countries.txt";
+		//String countriesFile = "/home/juanma/eclipse-workspace/Sprint1/Tasca3_JavaCollections/n1exercisi3/data/countries.txt";               
+		String countriesFile = CountriesGame.class.getResource("countries.txt").getFile();
+
+
 		HashMap<String, String> countries = loadCountries(countriesFile);
+		
+	
+		
+		
 		menu(countries);
 	
 
@@ -35,7 +43,7 @@ public class CountriesGame {
 		 boolean isfinish = false;
 		
 		 if(countries.isEmpty()) {
-			 System.out.println("loading.... opps!!! An error has been detected!! Please try again later." );
+			 System.out.println("loading.... An error has been detected!! Please try again later." );
 		
 		 }else {
 			 System.out.println("=== Welcome to Countries Game ===");
@@ -120,7 +128,7 @@ public class CountriesGame {
 			
 			br.close();
 		}catch(FileNotFoundException e) {
-			System.out.println("FileNotFoundException: File not found");
+			System.out.println("FileNotFoundException: File not found" + e.getMessage());
 			
 		}
 		 catch (IOException e) {
@@ -151,6 +159,7 @@ public class CountriesGame {
 	public static void saveScore(String name, int points) {
 		
 		try {
+			
 			FileWriter writer = new FileWriter("classificacio.txt", true);
 			writer.write("User: " +name+ ", Total Points: "+points+"\n");
 			writer.close();
@@ -158,7 +167,10 @@ public class CountriesGame {
 			System.out.println("IOException: "+ e.getMessage());
 			
 		}
+		
+		
 
+		
 	}
 	
 	
