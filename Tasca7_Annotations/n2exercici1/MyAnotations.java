@@ -11,7 +11,7 @@ public class MyAnotations {
 		@Retention(RetentionPolicy.RUNTIME)// disponible en tiempo de ejecucion
 		public @interface SerializacioJson{
 			
-			String directori();
+			String directory();
 		}
 		
 		@Target(ElementType.METHOD)

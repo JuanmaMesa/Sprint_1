@@ -6,14 +6,12 @@ import n2exercici1.MyAnotations.NivelSeguridad;
 import n2exercici1.MyAnotations.NivelSeguridad.Nivel;
 import n2exercici1.MyAnotations.SerializacioJson;
 
-@SerializacioJson(directori = "/Home/user")
+@SerializacioJson(directory = "data/output")
 public class SrialitzarJSON {
 
-	// block of code
-		
 	
 	@NivelSeguridad(Nivel.BAJO)
-	public void miContrasenya(){
+	public void myPassword(){
 		
 	}
 	
