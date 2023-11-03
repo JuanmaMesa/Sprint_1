@@ -19,25 +19,17 @@ public class CountriesGame {
 	public static void main(String[] args) {
 		
 
-		//String countriesFile = "/home/juanma/eclipse-workspace/Sprint1/Tasca3_JavaCollections/n1exercisi3/data/countries.txt";               
-		String countriesFile = CountriesGame.class.getResource("countries.txt").getFile();
-
-
+		String countriesFile = CountriesGame.class.getResource("resources/countries.txt").getFile();
+		
 		HashMap<String, String> countries = loadCountries(countriesFile);
 		
 	
 		
 		
 		menu(countries);
-	
-
-			
-		
-		
 				
 	}
-	
-
+	 private static Scanner input = new Scanner(System.in);
 	 public static void menu(HashMap<String, String> countries) {
 	
 		 boolean isfinish = false;
@@ -138,20 +130,20 @@ public class CountriesGame {
 		 
 	 }
 		 
+
 	public static String getname(String message) {
 		
-		Scanner input = new Scanner(System.in);
 		System.out.println(message);
-		String name = input.nextLine();
+		return input.nextLine();
 		
-		return name;	
+			
 	}
 
 	public static int getnumber(String message) {
-		Scanner input = new Scanner(System.in);
+	
 		System.out.println(message);
 		int number = input.nextInt();
-	
+		input.nextLine();
 		return number;
 		
 	}
@@ -159,14 +151,16 @@ public class CountriesGame {
 	public static void saveScore(String name, int points) {
 		
 		try {
-			
-			FileWriter writer = new FileWriter("classificacio.txt", true);
+			String scoreFile = "/home/juanma/eclipse-workspace/Sprint1/Tasca3_JavaCollections/n1exercisi3/resources/classificacio.txt";
+
+			FileWriter writer = new FileWriter(scoreFile, true);
 			writer.write("User: " +name+ ", Total Points: "+points+"\n");
 			writer.close();
 		}catch(IOException e) {
 			System.out.println("IOException: "+ e.getMessage());
 			
 		}
+		
 		
 		
 
