@@ -5,6 +5,7 @@ EJERCICIO 1: Listar Contenido de Directorio
 Este programa lista todos los archivos en un directorio proporcionado por el usuario, 
 ordenándolos alfabéticamente.
 
+INSTRUCCIONES DE EJECUCIÓN:
 1. Compilar el ejercicio con el comando:
    javac n1exercici1/App.java n1exercici1/Directory.java n1exercici1/MyComparator.java
 
@@ -16,6 +17,7 @@ EJERCICIO 2: Arbol de directorio.
 ---------------------------------------------------
 Este progrma muestra la estructura de un directorio en forma de arbol
 
+INSTRUCCIONES DE EJECUCIÓN:
 1.Compilar el ejercicio con el comando:
   javac n1exercici2/App_TreeDirectorY.java n1exercici1/Directory.java n1exercici1/MyComparator.java
 
@@ -33,3 +35,18 @@ INSTRUCCIONES DE EJECUCIÓN:
 1. Después de compilar, ejecuta el programa con este comando:
    java n1exercici3.App_File
 2. El programa automáticamente escribirá la información del directorio especificado en el archivo de texto.
+
+
+EJERCICIO 4: Generación y Lectura de Información de Directorio
+---------------------------------------------------------------
+Este programa toma una ruta de directorio y escribe información detallada de su estructura y 
+archivos a un archivo de texto, incluyendo el tipo (archivo o directorio), el nombre y la fecha de última modificación.
+despues leera el archivo y se mostrará por pantalla.
+
+INSTRUCCIONES DE EJECUCIÓN:
+1. Ejecuta el programa compilado con este comando:
+   java n1exercici4.App
+
+
+
+
