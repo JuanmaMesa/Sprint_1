@@ -25,7 +25,8 @@ Este progrma muestra la estructura de un directorio en forma de arbol
 
 INSTRUCCIONES DE EJECUCIÓN:
 1.Compilar el ejercicio con el comando:
-  javac n1exercici2/App_TreeDirectorY.java n1exercici2/DirectoryTree.java n1exercici1/MyComparator.java
+  javac n1exercici2/App_TreeDirectorY.java          
+  n1exercici2/DirectoryTree.java n1exercici1/MyComparator.java
 
 2.Ejecutar el ejercicio con el comando:
   java n1exercici2.App_TreeDirectorY
