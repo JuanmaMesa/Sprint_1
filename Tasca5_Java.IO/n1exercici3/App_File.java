@@ -1,27 +1,41 @@
 package n1exercici3;
 
-import n1exercici2.DirectoryTree;
+import java.util.Scanner;
 
 public class App_File {
 
 	public static void main(String[] args) {
 		
-		String filePath = "/home/juanma/eclipse-workspace/Sprint1";
-		String file =  "/home/juanma/eclipse-workspace/Sprint1/Prueba.txt";
+		Scanner input = new Scanner(System.in);
+		boolean istrue = false;
 		
-	
-		DirectoryTree_version2 directoryTree = new DirectoryTree_version2(filePath);
-		FileWriterReader fileWriter = new FileWriterReader(file, true);
+		while(!istrue) {
+
+			System.out.println("Escribe un directorio de tu pc para saber lo que hay dentro");
+			String path = input.nextLine();
+			System.out.println("ahora se te guardara una carpeta llamada informacion en la carpeta que has seleccionado anteriormente");
+			String file = path +"/informacion.txt";
 		
-		directoryTree.verificationDirectory(directoryTree.getDirectory(), fileWriter);
-		
-	
-		
-		
-	
-        
-        
-        
+			try {
+				DirectoryTree_version2 myFile = new DirectoryTree_version2(path);
+				if(myFile.getDirectory().isDirectory()) {
+					FileWriterReader fileWriter = new FileWriterReader(file, true);
+					myFile.verificationDirectory(myFile.getDirectory(),fileWriter);
+					istrue = true;
+				}else {
+					System.out.println("Lo que me has proporcionado no es un directorio");
+				}
+				
+			}catch(Exception e) {
+			System.out.println("Error: "+e.getMessage());
+			}
+			
+			
+		}
+		input.close();
 	}
+		
+	        
+	
 
 }
