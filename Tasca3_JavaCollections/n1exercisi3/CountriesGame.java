@@ -151,8 +151,7 @@ public class CountriesGame {
 	public static void saveScore(String name, int points) {
 		
 		try {
-			String scoreFile = "/home/juanma/eclipse-workspace/Sprint1/Tasca3_JavaCollections/n1exercisi3/resources/classificacio.txt";
-
+			String scoreFile =("src/n1exercici3/classificacio.txt");
 			FileWriter writer = new FileWriter(scoreFile, true);
 			writer.write("User: " +name+ ", Total Points: "+points+"\n");
 			writer.close();
